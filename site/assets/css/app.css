@@ -272,7 +272,6 @@ progress::-moz-progress-bar { background: var(--feito); border-radius: 99px; }
 .passagem a span { display: block; font-weight: 400; font-size: .85rem; }
 .passagem a[rel="next"] { text-align: right; grid-column: 2; }
 .passagem a[rel="prev"] { grid-column: 1; }
-.editar { font-size: .92rem; }
 
 /* Prosa (markdown renderizado) */
 .prosa { overflow-wrap: break-word; }
@@ -391,6 +390,7 @@ progress::-moz-progress-bar { background: var(--feito); border-radius: 99px; }
 .rodape { border-top: 1px solid var(--borda); background: var(--superficie); color: var(--mudo); font-size: .92rem; }
 .rodape-in { width: min(100% - 2rem, 80rem); margin-inline: auto; padding: 1.2rem 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .3rem 2rem; }
 .rodape p { margin: 0; }
+#rodape-links { display: flex; flex-wrap: wrap; gap: .3rem 1.2rem; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: .01ms !important; transition-delay: 0s !important; animation-duration: .01ms !important; scroll-behavior: auto !important; }

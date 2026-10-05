@@ -127,7 +127,6 @@ async function iniciarRodape() {
     const base = `https://github.com/${cfg.repo}`;
     $('#rodape-links').append(
       h('a', { href: base, target: '_blank', rel: 'noopener noreferrer' }, 'Repositório no GitHub'),
-      h('a', { href: base + '/issues', target: '_blank', rel: 'noopener noreferrer' }, 'Reportar um erro'),
       h('a', { href: '#/doc/CONTRIBUTING.md' }, 'Como contribuir'),
     );
   } catch { /* rodapé sem links */ }

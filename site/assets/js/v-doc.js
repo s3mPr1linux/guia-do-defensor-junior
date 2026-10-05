@@ -1,7 +1,7 @@
 // Leitor de documentos: índice lateral, sumário da página, checklists que salvam, gabaritos escondidos.
 
 import { h, $, plural } from './dom.js';
-import { config, manifesto, doc, urlGitHub } from './data.js';
+import { config, manifesto, doc } from './data.js';
 import { store } from './store.js';
 import { renderizar, rotaDoc, irParaAncora } from './md.js';
 
@@ -145,12 +145,9 @@ export async function render({ params, query, aoSair }) {
     anterior ? h('a', { href: rotaDoc(anterior.path), rel: 'prev' }, h('span', { class: 'mudo' }, 'Anterior'), anterior.title) : h('span'),
     proximo ? h('a', { href: rotaDoc(proximo.path), rel: 'next' }, h('span', { class: 'mudo' }, 'Próxima'), proximo.title) : h('span'));
 
-  const rodapeDoc = h('p', { class: 'mudo editar' },
-    h('a', { href: urlGitHub(cfg, path, 'edit'), target: '_blank', rel: 'noopener noreferrer' }, 'Sugerir uma correção desta página no GitHub'));
-
   const el = h('div', { class: 'doc' },
     h('div', { class: 'col-menu' }, alternar, nav),
-    h('article', { class: 'conteudo' }, crumbs, conteudo, passagem, rodapeDoc),
+    h('article', { class: 'conteudo' }, crumbs, conteudo, passagem),
     h('aside', { class: 'col-toc' }, toc));
 
   if (!meta.spoiler) store.visitar(path, meta.title);
