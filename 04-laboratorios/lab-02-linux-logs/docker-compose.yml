@@ -1,0 +1,26 @@
+# Lab 02 - Logs e SSH em Linux. Rede interna e isolada.
+services:
+  vitima:
+    build: ./vitima
+    hostname: srv-web01
+    networks: [labnet]
+
+  atacante1:
+    build: ./atacante
+    environment:
+      ROUNDS: 40
+      FINAL_USER: ana
+      FINAL_PASS: ana2024
+    depends_on: [vitima]
+    networks: [labnet]
+
+  atacante2:
+    build: ./atacante
+    environment:
+      ROUNDS: 6
+    depends_on: [vitima]
+    networks: [labnet]
+
+networks:
+  labnet:
+    driver: bridge

@@ -1,0 +1,29 @@
+{
+  "id": "fase1",
+  "titulo": "Fase 1: base de TI",
+  "modo": "flash",
+  "dica": "Responda de cabeça (ou escrevendo) antes de mostrar a resposta. Se errar 3 ou mais num bloco, revise o módulo.",
+  "blocos": {
+    "redes": { "nome": "Redes", "modulo": "02-fundamentos/fase-1-base-ti/01-redes.md" },
+    "linux": { "nome": "Linux", "modulo": "02-fundamentos/fase-1-base-ti/02-linux.md" },
+    "windows": { "nome": "Windows e Active Directory", "modulo": "02-fundamentos/fase-1-base-ti/03-windows-ad.md" },
+    "scripting": { "nome": "Scripting", "modulo": "02-fundamentos/fase-1-base-ti/04-scripting.md" }
+  },
+  "cartoes": [
+    { "id": "c1", "bloco": "redes", "pergunta": "Qual a diferença entre TCP e UDP? Cite um protocolo de cada.", "resposta": "TCP é orientado a conexão e confiável: entrega os dados em ordem e retransmite o que se perdeu (HTTP, HTTPS, SSH). UDP não tem conexão nem garantia de entrega, mas é mais leve e rápido (DNS, streaming, VoIP)." },
+    { "id": "c2", "bloco": "redes", "pergunta": "Quantos hosts úteis cabem em uma rede /26?", "resposta": "Uma /26 tem 64 endereços (2⁶). Menos o endereço de rede e o de broadcast, sobram 62 hosts úteis." },
+    { "id": "c3", "bloco": "redes", "pergunta": "O que acontece em um handshake TCP?", "resposta": "O cliente envia SYN, o servidor responde SYN-ACK e o cliente confirma com ACK. Só depois disso os dados da aplicação trafegam." },
+    { "id": "c4", "bloco": "redes", "pergunta": "Por que o DNS é importante para a segurança?", "resposta": "Quase toda conexão começa com uma consulta DNS, então ele é alvo de ataques (spoofing, tunelamento) e também uma ótima fonte de detecção: domínios suspeitos e consultas anômalas revelam malware e canais de C2." },
+    { "id": "c5", "bloco": "linux", "pergunta": "O que faz `chmod 750 arquivo`?", "resposta": "Dá ao dono leitura, escrita e execução (7), ao grupo leitura e execução (5) e a todos os outros nenhuma permissão (0)." },
+    { "id": "c6", "bloco": "linux", "pergunta": "Como listar as portas em escuta e o processo dono de cada uma?", "resposta": "`ss -tulpn` (ou `netstat -tulpn` em sistemas mais antigos). Rode com sudo para ver todos os processos." },
+    { "id": "c7", "bloco": "linux", "pergunta": "Onde ficam os logs de autenticação?", "resposta": "Em `/var/log/auth.log` no Debian e Ubuntu, e em `/var/log/secure` no RHEL e derivados. Em sistemas com systemd também dá para usar `journalctl -u ssh`." },
+    { "id": "c8", "bloco": "linux", "pergunta": "Qual comando conta os IPs únicos em um log?", "resposta": "Por exemplo: `awk '{print $1}' acesso.log | sort -u | wc -l`. Para contar quantas vezes cada IP aparece: `... | sort | uniq -c | sort -nr`." },
+    { "id": "c9", "bloco": "windows", "pergunta": "Qual a diferença entre os eventos 4624 e 4625?", "resposta": "4624 é um logon com sucesso; 4625 é uma falha de logon. Muitas falhas seguidas de um sucesso do mesmo IP sugerem força bruta bem-sucedida." },
+    { "id": "c10", "bloco": "windows", "pergunta": "O que é uma GPO?", "resposta": "Group Policy Object: um conjunto de configurações (senha, bloqueio de tela, software, scripts) aplicado a usuários e computadores de um domínio Active Directory." },
+    { "id": "c11", "bloco": "windows", "pergunta": "Qual evento indica a criação de um novo processo?", "resposta": "4688 (precisa da auditoria de criação de processos habilitada). O Sysmon registra o mesmo com mais detalhes no evento 1." },
+    { "id": "c12", "bloco": "windows", "pergunta": "Por que o evento 1102 é preocupante?", "resposta": "Ele registra que o log de auditoria foi apagado. É uma técnica comum de atacantes para esconder rastros depois de agir." },
+    { "id": "c13", "bloco": "scripting", "pergunta": "Qual é uma regex simples para um endereço IPv4?", "resposta": "`\\b(?:\\d{1,3}\\.){3}\\d{1,3}\\b`. Ela casa o formato, mas não valida que cada número é ≤ 255; para isso é preciso um padrão mais longo ou validar no código." },
+    { "id": "c14", "bloco": "scripting", "pergunta": "Como ler um arquivo linha a linha em Python?", "resposta": "`with open(\"arquivo.log\", encoding=\"utf-8\") as f:` seguido de `for linha in f:`. O `with` fecha o arquivo sozinho e o `for` não carrega tudo na memória." },
+    { "id": "c15", "bloco": "scripting", "pergunta": "Como passar um argumento a um script Bash?", "resposta": "Na chamada: `./script.sh arquivo.log`. Dentro do script, `$1` é o primeiro argumento, `$2` o segundo e `\"$@\"` todos eles." }
+  ]
+}

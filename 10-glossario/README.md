@@ -1,0 +1,68 @@
+# Glossário
+
+Termos que aparecem ao longo do guia, em ordem alfabética. Use a busca da página para filtrar.
+
+- **Active Directory (AD):** serviço de diretório da Microsoft que centraliza usuários, computadores, grupos e políticas em um domínio.
+- **APT (Advanced Persistent Threat):** grupo de atacantes com recursos e objetivos de longo prazo, que mantém acesso discreto por meses ou anos.
+- **Autenticação:** provar quem você é (senha, biometria, chave). Vem antes da autorização.
+- **Autorização:** definir o que uma identidade autenticada pode fazer.
+- **Blue Team:** equipe de defesa, responsável por prevenir, detectar e responder a ataques.
+- **Botnet:** rede de dispositivos infectados controlados remotamente por um atacante.
+- **C2 (Command and Control):** canal que o atacante usa para controlar máquinas comprometidas.
+- **CIA (tríade):** confidencialidade, integridade e disponibilidade, os três objetivos básicos da segurança da informação.
+- **CIS Benchmarks:** guias de configuração segura (hardening) para sistemas e aplicações, publicados pelo Center for Internet Security.
+- **CVE:** identificador público de uma vulnerabilidade conhecida (ex.: CVE-2024-12345).
+- **CVSS:** pontuação de 0 a 10 da gravidade técnica de uma vulnerabilidade.
+- **DFIR:** forense digital e resposta a incidentes.
+- **DLP (Data Loss Prevention):** controles que impedem a saída indevida de dados sensíveis.
+- **DNS:** sistema que traduz nomes de domínio em endereços IP.
+- **EDR/XDR:** detecção e resposta em endpoints (EDR) ou em várias camadas, como e-mail, identidade e nuvem (XDR).
+- **Engenharia social:** manipulação de pessoas para obter acesso ou informações (phishing é a forma mais comum).
+- **Escalação de privilégios:** obter permissões maiores do que as da conta comprometida.
+- **Exploit:** código ou técnica que aproveita uma vulnerabilidade.
+- **Falso negativo:** ataque real que a detecção não percebeu.
+- **Falso positivo:** alerta disparado por atividade legítima.
+- **Firewall:** controle que permite ou bloqueia tráfego de rede com base em regras.
+- **Hash:** resumo de tamanho fixo calculado a partir de dados; usado para verificar integridade. Não é reversível.
+- **Honeypot:** sistema isca, feito para atrair e observar atacantes.
+- **IAM (Identity and Access Management):** gestão de identidades e de seus acessos.
+- **IDS/IPS:** sistema de detecção de intrusão (IDS) ou de prevenção (IPS, que também bloqueia).
+- **IOC:** indicador de comprometimento, como um IP, domínio ou hash associado a uma ameaça.
+- **Kill chain:** modelo que descreve as etapas de um ataque, do reconhecimento ao objetivo final.
+- **KQL (Kusto Query Language):** linguagem de consulta usada no Microsoft Sentinel e no Defender.
+- **LGPD:** Lei Geral de Proteção de Dados, lei brasileira sobre o tratamento de dados pessoais.
+- **Log:** registro de eventos gerado por sistemas, aplicações e dispositivos.
+- **Malware:** software malicioso (vírus, trojan, ransomware, spyware etc.).
+- **MFA:** autenticação com mais de um fator (algo que você sabe, tem ou é).
+- **MITRE ATT&CK:** base de conhecimento de táticas e técnicas de atacantes, usada para classificar detecções.
+- **Movimento lateral:** deslocamento do atacante entre máquinas da rede após o acesso inicial.
+- **MSSP:** provedor de serviços gerenciados de segurança, que opera o SOC de outras empresas.
+- **NIST CSF:** framework do NIST para gerir riscos de cibersegurança (identificar, proteger, detectar, responder, recuperar).
+- **OWASP Top 10:** lista dos riscos mais críticos de segurança em aplicações web.
+- **Pass-the-hash:** técnica que usa o hash de uma senha, sem conhecer a senha, para se autenticar.
+- **Password spraying:** tentar poucas senhas comuns contra muitas contas, para evitar bloqueios.
+- **Patch:** correção de software que elimina uma vulnerabilidade.
+- **Pentest:** teste de invasão autorizado, para encontrar falhas antes de um atacante real.
+- **Persistência:** técnicas que mantêm o acesso do atacante após reinícios ou trocas de senha.
+- **Phishing:** mensagem fraudulenta que induz a vítima a clicar, abrir um anexo ou entregar credenciais.
+- **Playbook:** roteiro padronizado de resposta a um tipo de incidente, manual ou automatizado.
+- **Ransomware:** malware que cifra dados e exige pagamento para devolvê-los.
+- **RBAC:** controle de acesso baseado em papéis (funções).
+- **Red Team:** equipe que simula atacantes para testar a defesa.
+- **Sandbox:** ambiente isolado para executar e analisar arquivos suspeitos com segurança.
+- **Shadow IT:** uso de sistemas e serviços sem conhecimento ou aprovação da TI.
+- **Sigma:** formato aberto e independente de produto para escrever regras de detecção em logs.
+- **SIEM:** plataforma que centraliza e correlaciona logs para detectar ameaças.
+- **SOAR:** automação e orquestração da resposta a incidentes.
+- **SOC:** centro de operações de segurança, que monitora e responde a ameaças.
+- **Threat hunting:** busca proativa por ameaças que ainda não geraram alerta.
+- **Threat intelligence:** informação sobre ameaças, atores e indicadores que apoia decisões de defesa.
+- **TLS:** protocolo que cifra a comunicação (base do HTTPS).
+- **TTP:** táticas, técnicas e procedimentos usados por atacantes.
+- **UEBA:** análise do comportamento de usuários e entidades para detectar anomalias.
+- **VPN:** túnel cifrado entre um dispositivo e uma rede.
+- **Vulnerabilidade:** fraqueza que pode ser explorada para comprometer a segurança.
+- **WAF:** firewall de aplicação web, que filtra requisições HTTP maliciosas.
+- **YARA:** regras para identificar e classificar malware por padrões em arquivos e memória.
+- **Zero-day:** vulnerabilidade explorada antes de existir correção.
+- **Zero Trust:** modelo que não confia em ninguém por padrão: verificar sempre, dar o mínimo de acesso e presumir violação.

@@ -1,0 +1,19 @@
+{
+  "04-laboratorios/lab-01-wireshark": { "trilha": "fase1", "fase": "f1", "env": ["docker"] },
+  "04-laboratorios/lab-02-linux-logs": { "trilha": "fase1", "fase": "f1", "env": ["docker"] },
+  "04-laboratorios/lab-03-windows-eventos": { "trilha": "fase1", "fase": "f1", "env": ["offline"] },
+  "04-laboratorios/lab-04-cacador-forca-bruta": { "trilha": "fase1", "fase": "f1", "env": ["offline"] },
+
+  "04-laboratorios/sc-900/lab-01-hash-e-criptografia": { "trilha": "sc900", "env": ["offline"] },
+  "04-laboratorios/sc-900/lab-02-responsabilidade-defesa-zero-trust": { "trilha": "sc900", "env": ["offline"] },
+  "04-laboratorios/sc-900/lab-03-entra-identidades-mfa-rbac": { "trilha": "sc900", "env": ["nuvem"] },
+  "04-laboratorios/sc-900/lab-04-acesso-condicional": { "trilha": "sc900", "env": ["nuvem"] },
+  "04-laboratorios/sc-900/lab-05-pim-revisoes-id-protection": { "trilha": "sc900", "env": ["nuvem", "estudo de caso"] },
+  "04-laboratorios/sc-900/lab-06-rede-azure-nsg-key-vault": { "trilha": "sc900", "env": ["nuvem"] },
+  "04-laboratorios/sc-900/lab-07-defender-for-cloud-cspm": { "trilha": "sc900", "env": ["nuvem"] },
+  "04-laboratorios/sc-900/lab-08-kql-sentinel": { "trilha": "sc900", "env": ["offline", "nuvem"] },
+  "04-laboratorios/sc-900/lab-09-defender-xdr": { "trilha": "sc900", "env": ["nuvem", "estudo de caso"] },
+  "04-laboratorios/sc-900/lab-10-service-trust-compliance-manager": { "trilha": "sc900", "env": ["nuvem"] },
+  "04-laboratorios/sc-900/lab-11-purview-rotulos-dlp-retencao": { "trilha": "sc900", "env": ["nuvem"] },
+  "04-laboratorios/sc-900/lab-12-risco-interno-ediscovery-auditoria": { "trilha": "sc900", "env": ["nuvem", "estudo de caso"] }
+}

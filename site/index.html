@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guia do Defensor Júnior</title>
+  <meta name="description" content="Guia gratuito e aberto, em português, para chegar à primeira vaga de analista de segurança da informação júnior: trilha com progresso, laboratórios, quizzes e planejador de estudos.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#eff3f7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d1626" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/app.css">
+  <script>
+    // Aplica o tema salvo antes da primeira pintura, para não piscar.
+    try {
+      var t = (JSON.parse(localStorage.getItem('gdj:v1') || '{}') || {}).tema;
+      if (!t && window.matchMedia('(prefers-color-scheme: dark)').matches) t = 'dark';
+      if (t === 'dark' || t === 'light') document.documentElement.dataset.tema = t;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="pular" href="#principal" data-pular>Ir para o conteúdo</a>
+
+  <header class="topo">
+    <div class="topo-in">
+      <a class="marca" href="#/" aria-label="Guia do Defensor Júnior, página inicial">
+        <svg class="marca-sinal" viewBox="0 0 44 16" width="44" height="16" aria-hidden="true" focusable="false">
+          <line x1="5" y1="8" x2="39" y2="8" class="m-linha"/>
+          <circle cx="5" cy="8" r="4" class="m-a"/>
+          <circle cx="22" cy="8" r="4" class="m-a"/>
+          <circle cx="39" cy="8" r="4" class="m-b"/>
+        </svg>
+        <span class="marca-nome">Guia do Defensor Júnior</span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Principal">
+        <a href="#/trilha" data-rota="trilha">Trilha</a>
+        <a href="#/labs" data-rota="labs">Labs</a>
+        <a href="#/quiz" data-rota="quiz">Quizzes</a>
+        <a href="#/planejador" data-rota="planejador">Planejador</a>
+        <a href="#/glossario" data-rota="glossario">Glossário</a>
+      </nav>
+      <div class="acoes">
+        <button class="btn-busca" id="abrir-busca" type="button" aria-haspopup="dialog">
+          <span>Buscar</span><kbd aria-hidden="true">/</kbd>
+        </button>
+        <button class="btn-tema" id="alternar-tema" type="button" aria-pressed="false">Tema escuro</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="principal" tabindex="-1">
+    <noscript>
+      <div class="miolo">
+        <h1>Este site precisa de JavaScript</h1>
+        <p>O conteúdo do guia também está disponível em texto simples no repositório do GitHub, pasta por pasta.</p>
+      </div>
+    </noscript>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape-in">
+      <p>Guia aberto e gratuito, mantido pela comunidade. Conteúdo sob CC BY-SA 4.0, código sob MIT.</p>
+      <p id="rodape-links"></p>
+    </div>
+  </footer>
+
+  <div id="aviso" class="aviso" role="status" aria-live="polite"></div>
+  <div id="busca-raiz"></div>
+
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+{
+  "phases": [
+    {
+      "id": "f0", "num": 0, "nome": "Direção",
+      "resumo": "Entender o trabalho, escolher a trilha e definir seu plano de estudo.",
+      "duracao": "1 a 2 semanas", "horas": 8,
+      "leia": "00-comece-aqui/README.md",
+      "docs": [{ "path": "00-comece-aqui/README.md", "skip": [0, 1, 2, 3, 4, 5] }],
+      "labs": []
+    },
+    {
+      "id": "f1", "num": 1, "nome": "Base de TI",
+      "resumo": "Redes, Linux, Windows e Active Directory, scripting, virtualização e Git.",
+      "duracao": "2 a 3 meses", "horas": 100,
+      "leia": "02-fundamentos/fase-1-base-ti/README.md",
+      "docs": [
+        { "path": "02-fundamentos/README.md", "only": [0, 1, 2, 3] },
+        { "path": "02-fundamentos/fase-1-base-ti/README.md" },
+        { "path": "02-fundamentos/fase-1-base-ti/01-redes.md" },
+        { "path": "02-fundamentos/fase-1-base-ti/02-linux.md" },
+        { "path": "02-fundamentos/fase-1-base-ti/03-windows-ad.md" },
+        { "path": "02-fundamentos/fase-1-base-ti/04-scripting.md" },
+        { "path": "02-fundamentos/fase-1-base-ti/05-virtualizacao-docker-git.md" }
+      ],
+      "labs": [
+        "04-laboratorios/lab-01-wireshark",
+        "04-laboratorios/lab-02-linux-logs",
+        "04-laboratorios/lab-03-windows-eventos",
+        "04-laboratorios/lab-04-cacador-forca-bruta"
+      ],
+      "quiz": "fase1"
+    },
+    {
+      "id": "f2", "num": 2, "nome": "Fundamentos de segurança",
+      "resumo": "Tríade CIA, criptografia, identidade, vulnerabilidades e os frameworks que todo SOC cita.",
+      "duracao": "1 a 2 meses", "horas": 50,
+      "leia": "02-fundamentos/README.md",
+      "docs": [{ "path": "02-fundamentos/README.md", "skip": [0, 1, 2, 3] }],
+      "labs": []
+    },
+    {
+      "id": "f3", "num": 3, "nome": "Defesa na prática",
+      "resumo": "Logs, SIEM, EDR, triagem de alertas, phishing e resposta a incidentes.",
+      "duracao": "2 a 3 meses", "horas": 100,
+      "leia": "03-seguranca-defensiva/README.md",
+      "docs": [{ "path": "03-seguranca-defensiva/README.md" }],
+      "labs": []
+    },
+    {
+      "id": "f4", "num": 4, "nome": "Portfólio",
+      "resumo": "Projetos, write-ups e relatórios de incidente que mostram o que você sabe fazer.",
+      "duracao": "contínuo", "horas": 40,
+      "leia": "06-portfolio-github/README.md",
+      "docs": [{ "path": "06-portfolio-github/README.md" }],
+      "labs": []
+    },
+    {
+      "id": "f5", "num": 5, "nome": "Busca pela vaga",
+      "resumo": "Currículo, LinkedIn, entrevistas, comunidades e as primeiras candidaturas.",
+      "duracao": "1 a 2 meses", "horas": 30,
+      "leia": "07-carreira/README.md",
+      "docs": [{ "path": "07-carreira/README.md" }],
+      "labs": []
+    }
+  ],
+  "terminal": { "nome": "1ª vaga júnior" },
+  "trilhas": [
+    {
+      "id": "sc900", "nome": "SC-900 (Microsoft)",
+      "resumo": "Fundamentos de segurança, conformidade e identidade da Microsoft, com 12 labs.",
+      "duracao": "4 semanas", "horas": 28,
+      "leia": "05-certificacoes-cursos/sc-900/README.md",
+      "docs": [],
+      "labs": [
+        "04-laboratorios/sc-900/lab-01-hash-e-criptografia",
+        "04-laboratorios/sc-900/lab-02-responsabilidade-defesa-zero-trust",
+        "04-laboratorios/sc-900/lab-03-entra-identidades-mfa-rbac",
+        "04-laboratorios/sc-900/lab-04-acesso-condicional",
+        "04-laboratorios/sc-900/lab-05-pim-revisoes-id-protection",
+        "04-laboratorios/sc-900/lab-06-rede-azure-nsg-key-vault",
+        "04-laboratorios/sc-900/lab-07-defender-for-cloud-cspm",
+        "04-laboratorios/sc-900/lab-08-kql-sentinel",
+        "04-laboratorios/sc-900/lab-09-defender-xdr",
+        "04-laboratorios/sc-900/lab-10-service-trust-compliance-manager",
+        "04-laboratorios/sc-900/lab-11-purview-rotulos-dlp-retencao",
+        "04-laboratorios/sc-900/lab-12-risco-interno-ediscovery-auditoria"
+      ],
+      "quiz": "sc900"
+    }
+  ],
+  "diagnostico": [
+    { "doc": "00-comece-aqui/README.md", "indice": 0, "tema": "Redes", "revisar": "02-fundamentos/fase-1-base-ti/01-redes.md" },
+    { "doc": "00-comece-aqui/README.md", "indice": 1, "tema": "Linux", "revisar": "02-fundamentos/fase-1-base-ti/02-linux.md" },
+    { "doc": "00-comece-aqui/README.md", "indice": 2, "tema": "Windows e Active Directory", "revisar": "02-fundamentos/fase-1-base-ti/03-windows-ad.md" },
+    { "doc": "00-comece-aqui/README.md", "indice": 3, "tema": "Scripting", "revisar": "02-fundamentos/fase-1-base-ti/04-scripting.md" },
+    { "doc": "00-comece-aqui/README.md", "indice": 4, "tema": "Conceitos de segurança", "revisar": "02-fundamentos/README.md" },
+    { "doc": "00-comece-aqui/README.md", "indice": 5, "tema": "Análise em SIEM", "revisar": "03-seguranca-defensiva/README.md" }
+  ]
+}

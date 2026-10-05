@@ -1,0 +1,34 @@
+{
+  "titulo": "Guia do Defensor Júnior",
+  "repo": "s3mPr1linux/guia-do-defensor-junior",
+  "branch": "main",
+  "secoes": {
+    "00-comece-aqui": "Comece aqui",
+    "01-mentalidade": "Mentalidade",
+    "02-fundamentos": "Fundamentos",
+    "03-seguranca-defensiva": "Defesa na prática",
+    "04-laboratorios": "Laboratórios",
+    "05-certificacoes-cursos": "Certificações e cursos",
+    "06-portfolio-github": "Portfólio",
+    "07-carreira": "Carreira",
+    "08-trilhas-por-perfil": "Trilhas por perfil",
+    "09-recursos": "Recursos",
+    "10-glossario": "Glossário"
+  },
+  "quizzes": [
+    {
+      "id": "sc900",
+      "titulo": "SC-900: autoavaliação",
+      "descricao": "20 questões de múltipla escolha nos 4 domínios do exame. Mostra a nota por domínio e o módulo para revisar.",
+      "modo": "mc",
+      "fonte": "data/quizzes/sc900.json"
+    },
+    {
+      "id": "fase1",
+      "titulo": "Fase 1: base de TI",
+      "descricao": "15 perguntas de redes, Linux, Windows e scripting. Você responde de cabeça, confere e marca se acertou.",
+      "modo": "flash",
+      "fonte": "data/quizzes/fase1.json"
+    }
+  ]
+}
